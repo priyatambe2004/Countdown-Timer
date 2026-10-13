@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Countdown Timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+  <button class="theme-btn" id="themeBtn" aria-label="Toggle light and dark theme">🌙</button>
+
+  <main class="wrap">
+    <h1 id="title">New Year 2027</h1>
+    <p class="target" id="targetText"></p>
+
+    <div class="timer" id="timer" role="timer">
+      <div class="unit"><span class="num" id="days">00</span><span class="label">Days</span></div>
+      <div class="unit"><span class="num" id="hours">00</span><span class="label">Hours</span></div>
+      <div class="unit"><span class="num" id="minutes">00</span><span class="label">Minutes</span></div>
+      <div class="unit"><span class="num" id="seconds">00</span><span class="label">Seconds</span></div>
+    </div>
+
+    <div class="progress" id="progressBox">
+      <div class="bar"><div class="fill" id="fill"></div></div>
+      <span id="percent">0% elapsed</span>
+    </div>
+
+    <p class="message" id="message" hidden></p>
+
+    <section class="panel">
+      <div class="presets" id="presets">
+        <button data-name="New Year 2027" data-date="2027-01-01T00:00">New Year</button>
+        <button data-name="Diwali 2026" data-date="2026-11-08T00:00">Diwali</button>
+        <button data-name="Christmas 2026" data-date="2026-12-25T00:00">Christmas</button>
+      </div>
+
+      <form id="form">
+        <input type="text" id="nameInput" placeholder="Event name" maxlength="40" required>
+        <input type="datetime-local" id="dateInput" required>
+        <button type="submit" class="primary">Start</button>
+      </form>
+      <p class="error" id="error" role="alert"></p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
